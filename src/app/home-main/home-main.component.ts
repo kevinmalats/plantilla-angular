@@ -10,20 +10,18 @@ export class HomeMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    let pos=550;
+    var posy;
 
-
-
+    $( window ).scroll(function() {
+      var scrollTop = $(window).scrollTop();
+      if(scrollTop>=pos)
+        $( "#elementos" ).show("slow");
 
     (function($) {
 
-      let pos= 450;
-      var posy;
 
 
-      $( window ).scroll(function() {
-         var scrollTop = $(window).scrollTop();
-        
-          $( "#elementos" ).show("slow");
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
